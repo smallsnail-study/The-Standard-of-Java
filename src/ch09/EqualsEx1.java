@@ -1,5 +1,11 @@
 package ch09;
 
+class Value {
+    int value;
+    Value(int value) {
+        this.value = value;
+    }
+}
 class EqualsEx1 {
     public static void main(String[] args) {
         Value v1 = new Value(10);
@@ -10,6 +16,7 @@ class EqualsEx1 {
             System.out.println("v1과 v2는 같습니다.");
         else
             System.out.println("v1과 v2는 다릅니다.");
+        // v1과 v2는 다릅니다.
 
         v2 = v1;    // v2에 v1이 참조하고 있는 인스턴스의 주소값이 저장
 
@@ -18,18 +25,13 @@ class EqualsEx1 {
             System.out.println("v1과 v2는 같습니다.");
         else
             System.out.println("v1과 v2는 다릅니다.");
+        // v1과 v2는 같습니다.
     }
 }
 /*
 equals 메서드는 두 참조변수에 저장된 값(주소값)이 같은지를 판단
 -> 값을 비교하기 위해서는 오버라이딩해야 한다.
  */
-class Value {
-    int value;
-    Value(int value) {
-        this.value = value;
-    }
-}
 
 //실행결과
 //v1과 v2는 다릅니다.
